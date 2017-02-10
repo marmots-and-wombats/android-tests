@@ -4,12 +4,12 @@ import java.text.DateFormat
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
-    buildToolsVersion "24.0.2"
+    compileSdkVersion 25
+    buildToolsVersion "24.0.3"
     defaultConfig {
         applicationId "com.greenhouseci.androidtests"
         minSdkVersion 21
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode 1
 
         def myVersionString
@@ -38,20 +38,20 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:24.2.1'
-    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:design:25.1.1'
     testCompile 'junit:junit:4.12'
 }
 
-task myCustomTask << {
-    def envVars = [:]
-    System.getenv().each { k, v ->
-        println "${k} = ${v}"
-        envVars."$k" = v
-    }
-    println ""
-    println envVars
-}
+// task myCustomTask << {
+//     def envVars = [:]
+//     System.getenv().each { k, v ->
+//         println "${k} = ${v}"
+//         envVars."$k" = v
+//     }
+//     println ""
+//     println envVars
+// }
 
 //task sayAssembleStarted << {
 //    println "==========================================="
