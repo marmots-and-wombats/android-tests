@@ -2,8 +2,10 @@ package com.greenhouseci.androidtests;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
+import android.support.test.filters.Suppress;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -23,4 +25,21 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.greenhouseci.androidtests", appContext.getPackageName());
     }
+
+    @Test
+    public void thisWillPass() throws Exception {
+        assertTrue(true);
+    }
+
+    @Test
+    public void thisWillFail() throws Exception {
+        assertTrue(false);
+    }
+
+    @Ignore
+    @Test
+    public void thisWillBeSkipped() throws Exception {
+        assertTrue(true);
+    }
+
 }
